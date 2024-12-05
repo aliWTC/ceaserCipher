@@ -1,16 +1,14 @@
+//array of all characters to work with when encrypting or decrypting
+
 let x = ['a', 'b', 'c','d','e','f','g','h','i','j','k','l',
             'm','n','o','p','q','r','s','t','u','v','w','x','y','z'
 ]
 
-/*
-document.addEventListener('encOrDec').addEventListener('click', function(){
-    let encryption = document.getElementById("encOrDec").value
-    if (encryption === 'Encrypt'){
 
-    }
-})
-*/
 
+
+
+// Grabbing all the elements from the HTML form needed
 document.getElementById("myButton").addEventListener("click", function(){
 let letter = document.getElementById("inputString").value
 let shift = document.getElementById("rightOrLeft").value
@@ -19,6 +17,9 @@ let encryption = document.getElementById("encOrDec").value
 let output = document.getElementById("output")
 
 console.log(encryption)
+
+
+// Making it so the encryption and decryption actually do different things
 if (shift === 'left'){
     shiftNum *= -1
 
@@ -41,6 +42,10 @@ else {
 
 let newString = ''
 
+
+// This for loop encrypts or decrypts depending on direction, 
+// it has an if statement so that if the shift is right and it passes the
+// z letter (the laast letter) the index wont go out of range
 for (i = 0; i<letter.length; i++){
 
     console.log(x.indexOf(letter[i])+shiftNum)
@@ -64,6 +69,9 @@ for (i = 0; i<letter.length; i++){
 
 }
 console.log(newString)
+
+/*Outputting the new cipered string into a paragraph tag in HTML 
+using the tag ID*/
 output.textContent = newString
 
 
