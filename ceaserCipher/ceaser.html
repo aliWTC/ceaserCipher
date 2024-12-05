@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ceaser.js" defer></script>
+</head>
+<body>
+    
+    <center>
+
+        <h1>Ceaser Encrypt or Decrypt tool</h1>
+        <hr>
+
+
+    <label for="inputString">Enter a phrase </label><br>
+    <input type = 'text' id="inputString" name="inputString">
+    <br>
+    <label for="shifts">Number of shifts: </label><br>
+    <input type = 'number' id="shifts" name="shifts">
+    <br>
+    
+    <label for = 'rightOrLeft'>Choose direction</label><br>
+    <select name="rightOrLeft" id = "rightOrLeft">
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+    </select>    <br>
+
+
+    <label for="encOrDec">Encrypt or Decrypt?</label><br>
+    <select name="encOrDec" id = "encOrDec">
+        <option value="Encrypt">Encrypt</option>
+        <option value="Decrypt">Decrypt</option>
+    </select>    
+    <br><br><br>
+
+    <button type="submit" id="myButton">SUBMIT</button>
+
+    <br><br>OUTPUT: 
+    <hr>
+
+    <p id="output">
+        
+    </p>
+
+
+    </center>
+
+    <style>
+        #output {
+            color: red;
+            font-size: 50px;
+        }
+
+
+
+    </style>
+</body>
+</html>
+
+
